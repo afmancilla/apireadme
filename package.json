@@ -28,7 +28,7 @@
 	"scripts": {
 		"start": "node dist/cli.js generate",
 		"build":"npm run build:clean && npm run build:tsc",
-		"build:clean":"rimraf dist; exit 0",
+		"build:clean":"rimraf dist; rimraf README.md; exit 0",
 		"build:tsc":"rollup -c rollup.config.ts",	
 		"b:lib": "rollup -c rollup.config.ts",
 		"readme": "npm run b:lib && npm run generate:readme",

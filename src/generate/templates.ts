@@ -97,6 +97,11 @@ export function demoTemplate ({url}: DemoTemplateArgs) {
  * @param demo
  */
 export function descriptionTemplate ({description, text, demo}: DescriptionTemplateArgs): string {
+
+	console.log('description',description);
+	console.log('text',text);
+	console.log('demo',demo);
+
 	return `<p align="center">
   <b>${description}</b></br>
   <sub>${text != null ? text : ""}${demo != null ? ` ${demoTemplate({url: demo})}` : ""}<sub>
@@ -175,6 +180,9 @@ ${rows
  * @param pkg
  */
 export function tocTemplate ({titles, config}: TableOfContentsTemplateArgs): string {
+
+	//console.log('titles......:',titles);
+	//console.log('config......:',config);
 
 	// Create a clean titles array.
 	// We are going to use it to figure out the index of each title (there might be more titles with the same name).

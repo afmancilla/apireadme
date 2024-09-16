@@ -1,11 +1,11 @@
 {
 	"package": "package.json",
-	"blueprint": "blueprint.md",
-	"input": "blueprint.md",
+	"blueprint": "./readme/template/apireadme.md",
+	"input": "./readme/template/apireadme.md",
 	"output": "README.md",
 	"text": "Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.",
 	"logo": {
-		"src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+		"src": "https://raw.githubusercontent.com/afmancilla/apireadme/main/assets/logo-shadow.png",
 		"width": 150,
 		"height": 150
 	},
@@ -19,8 +19,8 @@
 		}
 	},
 	"ids": {
-		"github": "andreasbm/readme",
-		"npm": "@appnest/readme"
+		"github": "afmancilla/apireadme",
+		"npm": "@apinauta/apireadme"
 	},
 	"badges": [
 		{
@@ -37,7 +37,8 @@
 	"bullets": {
 		"Simple": "Extremely simple to use - so simple that it almost feels like magic!",
 		"Powerful": "Customize almost everything - add your own templates and variables if you like",
-		"Awesome": "The tool you don't know you need before you have many different repositories that all need maintenance"
+		"Awesome": "The tool you don't know you need before you have many different repositories that all need maintenance",
+		"alex": "esta aqui"
 	},
 	"featured": [
 		"[lit-translate](https://github.com/andreasbm/lit-translate)",

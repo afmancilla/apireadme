@@ -1,20 +1,23 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->Welcome to `{{ pkg.name }}`. This is version alex
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png" alt="Logo" width="150" height="150" />
+<!-- ⚠️ This README has been generated from the file(s) "./readme/template/apireadme.md" ⚠️--><p align="center">
+  <img src="https://raw.githubusercontent.com/afmancilla/apireadme/main/assets/logo-shadow.png" alt="Logo" width="150" height="150" />
 </p>
 <h1 align="center">apireadme</h1>
 <p align="center">
-		<a href="https://npmcharts.com/compare/@appnest/readme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@appnest/readme.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@appnest/readme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@appnest/readme.svg" height="20"/></a>
-<a href="https://david-dm.org/andreasbm/readme"><img alt="Dependencies" src="https://img.shields.io/david/andreasbm/readme.svg" height="20"/></a>
-<a href="https://github.com/andreasbm/readme/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/andreasbm/readme.svg" height="20"/></a>
+		<a href="https://npmcharts.com/compare/@apinauta/apireadme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@apinauta/apireadme.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/@apinauta/apireadme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@apinauta/apireadme.svg" height="20"/></a>
+<a href="https://david-dm.org/afmancilla/apireadme"><img alt="Dependencies" src="https://img.shields.io/david/afmancilla/apireadme.svg" height="20"/></a>
+<a href="https://github.com/afmancilla/apireadme/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/afmancilla/apireadme.svg" height="20"/></a>
 <a href="https://github.com/badges/shields"><img alt="Custom badge" src="https://img.shields.io/badge/custom-badge-f39f37.svg" height="20"/></a>
 <a href="https://github.com/andreasbm/readme/graphs/commit-activity"><img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" height="20"/></a>
 	</p>
 
-[[ template:description ]]
+<p align="center">
+  <b>Generador de README para APIs REST</b></br>
+  <sub>Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.<sub>
+</p>
+
+<br />
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/demo.gif" alt="Demo" width="800" />
@@ -23,9 +26,10 @@
 * **Simple**: Extremely simple to use - so simple that it almost feels like magic!
 * **Powerful**: Customize almost everything - add your own templates and variables if you like
 * **Awesome**: The tool you don't know you need before you have many different repositories that all need maintenance
+* **alex**: esta aqui
 
 <details>
-<summary>📖 Table of Contents</summary>
+<summary>📖 Table of Contents </summary>
 <br />
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
@@ -74,6 +78,7 @@
 * [➤ Contributors](#-contributors-1)
 * [➤ License](#-license-1)
 </details>
+termino
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
@@ -81,10 +86,10 @@
 ## ➤ Installation
 
 ```javascript
-npm install @appnest/readme -D
+npm install @apinauta/apireadme -D
 ```
 
-If you don't want to install anything you can use the `npx @appnest/readme generate` command instead.
+If you don't want to install anything you can use the `npx @apinauta/apireadme generate` command instead.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#getting-started-quick)
 
@@ -93,7 +98,7 @@ If you don't want to install anything you can use the `npx @appnest/readme gener
 This getting started guide is super quick! Follow these two steps and you will have turned your boring readme into a pretty one.
 
 1. Rename your current `README.md` file to `blueprint.md`.
-2. Run `npx @appnest/readme generate`
+2. Run `npx @apinauta/apireadme generate`
 
 That's it! Check out your freshly generated `README.md` file and enjoy the fruits of what you just did.
 
@@ -195,7 +200,7 @@ That's cool. Let's go through some of the other built-in templates you might wan
 The logo template adds a logo to your readme and looks like this:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png" alt="Logo" width="150" height="150" />
+  <img src="https://raw.githubusercontent.com/afmancilla/apireadme/main/assets/logo-shadow.png" alt="Logo" width="150" height="150" />
 </p>
 
 Use the placeholder `{{ template:logo }}` to stamp it. You will need to add the `logo` field to your `blueprint.json`. The logo field requires an `src` field. Optionally you can provide values for `width`, `height` and `alt`. Below is an example on how to add the data for the logo template.
@@ -203,7 +208,7 @@ Use the placeholder `{{ template:logo }}` to stamp it. You will need to add the 
 ```json
 {
   "logo": {
-    "src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+    "src": "https://raw.githubusercontent.com/afmancilla/apireadme/main/assets/logo-shadow.png",
     "width": "150"
   }
 }
@@ -214,10 +219,10 @@ Use the placeholder `{{ template:logo }}` to stamp it. You will need to add the 
 The badges template adds badges to your readme and looks like this:
 
 <p align="center">
-		<a href="https://npmcharts.com/compare/@appnest/readme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@appnest/readme.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@appnest/readme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@appnest/readme.svg" height="20"/></a>
-<a href="https://david-dm.org/andreasbm/readme"><img alt="Dependencies" src="https://img.shields.io/david/andreasbm/readme.svg" height="20"/></a>
-<a href="https://github.com/andreasbm/readme/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/andreasbm/readme.svg" height="20"/></a>
+		<a href="https://npmcharts.com/compare/@apinauta/apireadme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@apinauta/apireadme.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/@apinauta/apireadme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@apinauta/apireadme.svg" height="20"/></a>
+<a href="https://david-dm.org/afmancilla/apireadme"><img alt="Dependencies" src="https://img.shields.io/david/afmancilla/apireadme.svg" height="20"/></a>
+<a href="https://github.com/afmancilla/apireadme/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/afmancilla/apireadme.svg" height="20"/></a>
 <a href="https://github.com/badges/shields"><img alt="Custom badge" src="https://img.shields.io/badge/custom-badge-f39f37.svg" height="20"/></a>
 <a href="https://github.com/andreasbm/readme/graphs/commit-activity"><img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" height="20"/></a>
 	</p>
@@ -228,8 +233,8 @@ Use the `{{ template:badges }}` placeholder to stamp it. You will need to add th
 ```json
 {
   "ids": {
-    "github": "andreasbm/readme",
-    "npm": "@appnest/readme"
+    "github": "afmancilla/apireadme",
+    "npm": "@apinauta/apireadme"
   },
   "badges": [
     {
@@ -247,7 +252,13 @@ If you need some inspiration for badges, check [this website](https://shields.io
 
 The description template adds a description to your readme and looks like this:
 
-[[ template:description ]]
+<p align="center">
+  <b>Generador de README para APIs REST</b></br>
+  <sub>Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.<sub>
+</p>
+
+<br />
+
 
 Use the `{{ template:description }}` placeholder to stamp it. To use this template you are required to add the field `description` to your `package.json` file. Optionally you can also add the fields `text` and `demo` in your `blueprint.json` file which will be presented below the description.
 
@@ -502,7 +513,7 @@ You are able to create your own templates to keep things as DRY as a hot summer 
 
 Then you can stamp your custom template using the `{{ template:install }}` syntax ("install" here referencing the name of the custom template). The below is an example of what is stamped to the README file using the above template.
 
-Run `npm install @appnest/readme' to install this library!
+Run `npm install @apinauta/apireadme' to install this library!
 
 Be creative! You can for example add a template for code-snippets or [words you keep spelling wrong](https://en.oxforddictionaries.com/spelling/common-misspellings).
 

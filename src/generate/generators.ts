@@ -38,7 +38,10 @@ export const generateLoad: IGenerator<LoadTemplateArgs> = {
 		}
 
 		// Read the file
+		//console.log('absolutePath******',absolutePath);
 		const content = readFile(absolutePath) || "";
+
+		//console.log('content******',content);
 		return {content, generateReadme, configPath, config};
 	}
 };
@@ -193,6 +196,10 @@ export const generateToc: IGenerator<TableOfContentsTemplateArgs> = {
 	regex: placeholderRegexCallback("template:toc"),
 	template: tocTemplate,
 	params: ({config, blueprint}) => {
+
+		console.log('inicio.....:');
+		console.log('blueprint.....:',blueprint);
+		console.log('final.....:');
 		const titles = blueprint.match(/^[#]{1,6} .*$/gm);
 		if (titles == null) {
 			return {error: "it could not find any titles"};

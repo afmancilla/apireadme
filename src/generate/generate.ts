@@ -51,8 +51,13 @@ export async function generateReadme ({config, blueprint, configPath, generators
 
 						// Get the required and optional parameters
 						const optionalParams = (<any>generator.params)["optional"] || [];
-						const requiredParams = {...generator.params};
-						//delete requiredParams["optional"];
+						const requiredParams:Params = {...generator.params};
+
+						console.log('optionalParams*******:',optionalParams);
+						console.log('requiredParams*******:',requiredParams);
+						console.log('generator.params*******:',generator.params);
+
+						delete requiredParams["optional"];
 
 						// Validate the params
 						if (!validateObject({obj: config, requiredFields: (<any>Object).values(requiredParams)})) {
@@ -97,12 +102,15 @@ export async function generate ({config, configPath, generators}: {config: IConf
 
 	// Grab blueprint
 	let blueprint: string = "";
+
+	console.log('config************',config);
+
 	if (Array.isArray(config.input)) {
 		blueprint = config.input.join(config.lineBreak);
 
 	} else {
 		const blueprintPath = resolve(config.input);
-		if (!fileExists(blueprintPath)) {
+		if (!fileExists(blueprintPath)) {//No hay archivo ./readme/template/apireadme.md
 			console.log(red(`[readme] - Could not find the blueprint file "${blueprintPath}". Make sure to provide a valid path as either the user arguments --readme.input or in the "input" field in the "${configPath}" file.`));
 			return;
 		}
@@ -110,12 +118,15 @@ export async function generate ({config, configPath, generators}: {config: IConf
 		blueprint = readFile(blueprintPath) || "";
 	}
 
+	console.log('blueprint************',blueprint);
 	// Grab templates
 	if (templates != null) {
 		const simpleTemplateGenerators = templates.map(simpleTemplateGenerator);
 
 		// Append the simple generators after the loading generator
 		generators.splice(1, 0, ...simpleTemplateGenerators);
+
+		console.log('generators************',generators);
 	}
 
 	// Generate the readme

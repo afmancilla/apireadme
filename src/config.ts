@@ -31,7 +31,7 @@ export const defaultDocumentationConfig: Partial<TransformerConfig> = {
 /**
  * Default name of the blueprint configuration.
  */
-export const defaultConfigName = `blueprint.json`;
+export const defaultConfigName = `./readme/data/estructura.json`;
 
 /**
  * Default configuration.
@@ -39,9 +39,9 @@ export const defaultConfigName = `blueprint.json`;
 export const defaultConfig: IConfig = {
 	lineBreak: "\r\n",
 	tab: "\t",
-	input: "blueprint.md",
+	input: "./readme/template/apireadme.md", //Plantilla Principal del README.md
 	package: "package.json",
-	output: "README.md",
+	output: "README.md", //salida del archivo generado y la ubicacion
 	checkLinks: false,
 	placeholder: ["{{", "}}"],
 	dry: false,
