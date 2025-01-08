@@ -1,0 +1,2 @@
+# {{=data.api.info.title}}
+Version v{{=data.api.info.version}}

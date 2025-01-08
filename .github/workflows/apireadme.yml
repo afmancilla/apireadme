@@ -1,0 +1,65 @@
+name: Generar README.md
+
+on:
+  repository_dispatch:
+    types: [readme-update]
+
+jobs:
+  generate-apireadme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Copiar repositorio apireadme
+      uses: actions/checkout@v2
+
+    - name: Instalar Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20.18.0'
+        
+    - name: Verificar versión de Node
+      run: node --version
+      
+    - name: Instalar Libreria Widdershins
+      run: npm install -g widdershins
+
+    - name: Clonar repositorio origen
+      run: |
+        git clone https://github.com/${{ github.event.client_payload.repository }} source-repo
+        cd source-repo
+        git checkout ${{ github.event.client_payload.ref }}
+
+    - name: Generate secciones automaticas
+      run: |
+        for file in ./readme/template/auto/*.dot; do
+          section=$(basename "$file" .dot)
+          cp "$file" "./readme/template/main.dot"
+          widdershins "./source-repo/api/contrato.yaml" -o "./readme/template/section/${section}.md" -u "./readme/template" --omitHeader
+          #cat "./readme/template/section/${section}.md"
+        done
+
+    - name: Generate secciones manuales
+      run: |
+        for file in ./readme/template/manual/*.md; do
+          section=$(basename "$file" .md)
+          cp "./source-repo/docs/readme-sections/${section}.md" "./readme/template/section/${section}.md"
+          #cat "./readme/template/section/${section}.md"
+        done
+        
+    - name: Generate unico Readme.md
+      run: |
+        npm install
+        npm run build
+        npm run readme
+        #cat README.md
+        cp README.md "./source-repo/docs/README.md"
+
+    - name: Guardar README.md en repositorio origen
+      run: |
+        #cat ./source-repo/docs/README.md
+        cd source-repo
+        git config --global user.email "afmancilla@gmail.com"
+        git config --global user.name "afmancilla"
+        git add docs/README.md
+        git commit -m "APIREADNME Generate README.md"
+        git push https://x-access-token:${{ github.event.client_payload.token }}@github.com/${{ github.event.client_payload.repository }} HEAD:${{ github.event.client_payload.ref }}

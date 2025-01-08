@@ -1,0 +1,22 @@
+## Decripcion General
+{{=data.api.info.description}}
+
+### Documentación Extendida
+{{? data.api.externalDocs}}
+<a href="{{=data.api.externalDocs.url}}">{{=data.api.externalDocs.description||'Documentación Extendida'}}</a>
+{{?}}
+
+{{? data.api.servers }}
+### Base URLs:
+{{~data.api.servers :s}}
+* <a href="{{=s.url}}">{{=s.url}}</a>
+{{ for(var v in s.variables) { }}
+    * **{{=v}}** - {{=s.variables[v].description||''}} Default: {{=s.variables[v].default}}
+{{? s.variables[v].enum}}
+{{~ s.variables[v].enum :e}}
+        * {{= e}}
+{{~}}
+{{?}}
+{{ } }}
+{{~}}
+{{?}}

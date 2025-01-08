@@ -1,0 +1,29 @@
+AS-IS
+
+├───readme/
+│   └───nombre-repositorio/
+│   └───decripcion-general/
+│       └───tabla-url-ambientes
+│       └───tabla-url-stoplight
+│       └───autenticacion
+│   └───recursos/
+│       └───requisitos
+│       └───endpoints
+│       └───tabla-modelo-datos
+│       └───parametros
+│       └───ejemplos-json
+│       └───codigos-error
+│
+├───documentacion-arquitectura/
+├───url-portal-papi/
+├───mas-informacion/
+
+
+TO-BE
+
+├───api/
+│   └───nombre-repositorio.yaml
+│
+├───docs/
+    ├───CHANGELOG.md
+    └───README.md

@@ -1,0 +1,6 @@
+## Endpoints
+
+{{ count = 0; }}
+|Nro|TAG|HTTP Operation|Endpoint|Description|
+|---|---|---|---|---|{{ for (var r in data.resources) { /* inicio resources */ }}{{ recurso = data.resources[r]; }}{{ for (var m in recurso.methods) { }}{{ count = count + 1; }}{{ metodo = recurso.methods[m]; }}
+|{{=count}}|{{= r}}|{{=metodo.verb.toUpperCase()}}|{{=metodo.path}}|{{=metodo.operation.summary}}|{{ }/* of methods */ }}{{ } /* final resources */ }}
