@@ -1,4 +1,5 @@
 {
   "name": "Mi Ambiente",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:16"
+  "image": "mcr.microsoft.com/devcontainers/node:18",
+  "postCreateCommand": "npm install"
 }
